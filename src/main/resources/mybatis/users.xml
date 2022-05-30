@@ -12,4 +12,8 @@
         where u.login = #{login} and
         u.password = #{password}
     </select>
+
+    <update id="setTokenUser">
+        update users set token = #{token}
+    </update>
 </mapper>

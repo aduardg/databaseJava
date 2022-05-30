@@ -20,8 +20,13 @@ public class UserService {
             String token = generateToken();
             checkUser.setToken(token);
             checkUser.setPassword(null);
+            UpdateUserToken(checkUser);
         }
         return checkUser;
+    }
+
+    public int UpdateUserToken(User user){
+        return userMapper.setTokenUser(user);
     }
 
 
